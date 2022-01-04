@@ -1,0 +1,16 @@
+<div class="lockscreen-container">
+    <div class="password-container-vertical">
+        <div class="password-container-horizontal">
+            <span class="material-icons-outlined lock-icon">lock</span>            
+        </div>
+
+        <div class="password-container-horizontal">
+            <div>
+                <input (keyup.enter)="submit()" [(ngModel)]="password" class="password-input">
+            </div>
+        </div>
+        <div class="password-container-horizontal">
+            <button (click)="submit()" mat-raised-button color="primary" class="password-button">Submit</button>
+        </div>
+    </div>
+</div>

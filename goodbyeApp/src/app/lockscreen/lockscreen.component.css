@@ -1,0 +1,38 @@
+.lockscreen-container {
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 100%;
+}
+
+.password-container-vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.password-container-horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px
+}
+
+.lock-icon {
+    color: black;
+    background-color: white;
+    border-radius: 100%;
+    padding: 5px;
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+
+.password-input {
+    width: 500px;
+    height: 50px;
+}
+
+.password-button {
+    width: 150px;
+    height: 42px;
+    font-size: 24px;
+}
