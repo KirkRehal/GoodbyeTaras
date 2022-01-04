@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   public title: string = 'Goodbye, Taras';
-  public showLockscreen: boolean = true;
+  public showLockscreen: boolean = false;
   
   ngOnInit() { 
 
