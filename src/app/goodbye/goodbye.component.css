@@ -1,0 +1,49 @@
+.quote-container {
+    position: absolute;
+    animation: fadeInOut var(--view-duration);
+    animation-iteration-count: infinite;
+    width: 100%;
+}
+
+.left-to-right {
+    animation: leftToRight var(--view-duration);
+    animation-iteration-count: infinite;
+}
+
+.right-to-left {
+    animation: rightToLeft var(--view-duration);
+    animation-iteration-count: infinite;
+}
+
+.quote-text {
+    font-size: 84px;
+    position: relative;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.image {
+    max-width: 800px;
+    max-height: 600px;
+}
+
+/* animations */
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes leftToRight {
+    0% { left: 0%; }
+    100% { left: 5%; }
+}
+
+@keyframes rightToLeft {
+    0% { left: 50%; }
+    100% { left: 45%; }
+}

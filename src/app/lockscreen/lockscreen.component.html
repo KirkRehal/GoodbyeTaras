@@ -6,7 +6,7 @@
 
         <div class="password-container-horizontal">
             <div>
-                <input (keyup.enter)="submit()" [(ngModel)]="password" class="password-input">
+                <input (keyup.enter)="submit()" [(ngModel)]="password" class="password-input" [class.incorrect]="incorrectPassword">
             </div>
         </div>
         <div class="password-container-horizontal">

@@ -1,8 +1,11 @@
-<div>
-    Taras quote: {{quotes[selectedIndex]}}
+<div class="quote-container">
+    <span class="quote-text" [class.left-to-right]="selectedIndex % 2 === 0" [class.right-to-left]="selectedIndex % 2 !== 0">{{quotes[selectedIndex]}}</span>
 </div>
 
-<div>
-    Taras image:
-    <img src="assets/{{images[selectedIndex]}}"/>
+<div class="image-container">
+    <div><img class="image" src="assets/{{images[selectedIndex]}}"/></div>
 </div>
+
+<audio src="assets/song.mp3" autoplay>
+    <p>If you are reading this, it is because your browser does not support the audio element.     </p>
+</audio>

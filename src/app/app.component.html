@@ -1,9 +1,12 @@
 <div class="container">
-  <app-lockscreen (passwordEmitter)="checkPassword($event)" *ngIf="showLockscreen"></app-lockscreen>
-  <app-goodbye></app-goodbye>
-</div>
-<div class="footer">
-  <div class="text-container">
-    <span class="text"><a href="https://www.mirchi9.com/wp-content/uploads/2018/07/Deverakonda-Brothers-in-Rowdy-Wear.jpg">2021 © Lungi Bros, Inc.</a></span>
+  <div class="header"></div>
+  <div class="body">
+    <app-lockscreen (passwordEmitter)="checkPassword($event)" *ngIf="showLockscreen"></app-lockscreen>
+    <app-goodbye *ngIf="!showLockscreen"></app-goodbye>
+  </div>
+  <div class="footer">
+    <div class="text-container">
+      <span class="text"><a href="https://www.mirchi9.com/wp-content/uploads/2018/07/Deverakonda-Brothers-in-Rowdy-Wear.jpg">2021 © Lungi Bros, Inc.</a></span>
+    </div>
   </div>
 </div>

@@ -1,2 +1,6 @@
 @import '~material-icons/iconfont/material-icons.css';
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+:root {
+    --view-duration: 4s;
+}

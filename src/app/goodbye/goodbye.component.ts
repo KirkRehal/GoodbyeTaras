@@ -7,14 +7,14 @@ import { interval, Subscription, tap } from 'rxjs';
   styleUrls: ['./goodbye.component.css']
 })
 export class GoodbyeComponent implements OnInit {
-  public images: string[] = ['lungi.jpg', 'lungi.jpg', 'lungi.jpg'];
+  public images: string[] = ['taras1.png', 'taras2.gif', 'lungi.jpg'];
   public quotes: string[] = ['test', 'oof', 'womp'];
 
   public selectedIndex = 0;
   private counter = 0;
   private refreshTimer = 4000;
   private subscription: Subscription = new Subscription();
-  
+
   constructor() { }
 
   ngOnInit(): void {
