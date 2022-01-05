@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=The+Nautigal&display=swap');
+
 .quote-container {
+    z-index: 5;
     position: absolute;
     animation: fadeInOut var(--view-duration);
     animation-iteration-count: infinite;
@@ -10,14 +13,28 @@
     animation-iteration-count: infinite;
 }
 
+.left-to-right > blockquote {
+    border-left: 10px solid #ccc;
+}
+
 .right-to-left {
     animation: rightToLeft var(--view-duration);
     animation-iteration-count: infinite;
 }
 
-.quote-text {
+.right-to-left > blockquote {
+    border-right: 10px solid #ccc;
+}
+
+.quote-outer {
     font-size: 84px;
     position: relative;
+}
+
+.quote-text {
+    font-size: 180px;
+    font-family: 'The Nautigal', cursive;
+    text-shadow: -1px 1px 0 #fff, 1px 1px 0 #ffff, 1px -1px 0 #fff, -1px -1px 0 #fff;
 }
 
 .image-container {
@@ -26,9 +43,34 @@
 }
 
 .image {
-    max-width: 800px;
-    max-height: 600px;
+    z-index: 1;
+    animation: slowZoom var(--zoom-duration) linear;
+    animation-iteration-count: infinite;
 }
+
+.image-outer {
+    animation: panUp var(--zoom-duration) linear;
+    animation-iteration-count: infinite;
+}
+
+blockquote {
+    background: transparent;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+    max-width: 50%;
+  }
+  blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+  blockquote p {
+    display: inline;
+  }
 
 /* animations */
 @keyframes fadeInOut {
@@ -46,4 +88,24 @@
 @keyframes rightToLeft {
     0% { left: 50%; }
     100% { left: 45%; }
+}
+
+@keyframes slowZoom {
+    0% { 
+        transform: scale(0.5);
+    }
+
+    100% { 
+        transform: scale(6.5); 
+    }
+}
+
+@keyframes panUp {
+    0% { 
+        transform: translate(0, 0px);
+    }
+
+    100% { 
+        transform: translate(1500px, 4200px);
+    }
 }

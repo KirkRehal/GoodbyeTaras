@@ -7,12 +7,14 @@ import { interval, Subscription, tap } from 'rxjs';
   styleUrls: ['./goodbye.component.css']
 })
 export class GoodbyeComponent implements OnInit {
-  public images: string[] = ['taras1.png', 'taras2.gif', 'lungi.jpg'];
-  public quotes: string[] = ['test', 'oof', 'womp'];
+  public images: string[] = ['taras1.png'];
+  public imageCounter: number = 0;
 
-  public selectedIndex = 0;
+  public quotes: string[] = [`Daddy's home.`, `Kirk and Sri have always been the best.`, `Ukraine gives me ulcers...`];
+  public quoteCounter: number = 0;
+
   private counter = 0;
-  private refreshTimer = 4000;
+  private refreshTimer = 8000;
   private subscription: Subscription = new Subscription();
 
   constructor() { }
@@ -23,7 +25,8 @@ export class GoodbyeComponent implements OnInit {
     this.subscription = source.pipe(
       tap(() => {
         this.counter++;
-        this.selectedIndex = this.counter % 3;
+        this.imageCounter = this.counter % this.images.length;
+        this.quoteCounter = this.counter % this.quotes.length;
       })
     ).subscribe();
   }

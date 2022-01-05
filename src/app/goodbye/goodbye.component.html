@@ -1,11 +1,18 @@
+<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=The+Nautigal&display=swap" rel="stylesheet"> -->
+
 <div class="quote-container">
-    <span class="quote-text" [class.left-to-right]="selectedIndex % 2 === 0" [class.right-to-left]="selectedIndex % 2 !== 0">{{quotes[selectedIndex]}}</span>
+    <span class="quote-outer" [class.left-to-right]="quoteCounter % 2 === 0" [class.right-to-left]="quoteCounter % 2 !== 0">
+        <blockquote><span class="quote-text">{{quotes[quoteCounter]}}</span></blockquote>
+    </span>
 </div>
 
 <div class="image-container">
-    <div><img class="image" src="assets/{{images[selectedIndex]}}"/></div>
+    <div class="image-outer"><img class="image" src="assets/{{images[imageCounter]}}"/></div>
 </div>
 
-<audio src="assets/song.mp3" autoplay>
-    <p>If you are reading this, it is because your browser does not support the audio element.     </p>
+<!-- <iframe src="silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe> -->
+<audio id="player" autoplay loop>
+    <source src="assets/song.mp3" type="audio/mp3">
 </audio>
