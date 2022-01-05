@@ -32,7 +32,7 @@
 }
 
 .quote-text {
-    font-size: 180px;
+    font-size: 80px;
     font-family: 'The Nautigal', cursive;
     text-shadow: -1px 1px 0 #fff, 1px 1px 0 #ffff, 1px -1px 0 #fff, -1px -1px 0 #fff;
 }
@@ -102,10 +102,10 @@ blockquote {
 
 @keyframes panUp {
     0% { 
-        transform: translate(0, 0px);
+        transform: translate(0px, -300px);
     }
 
     100% { 
-        transform: translate(1500px, 4200px);
+        transform: translate(1500px, 3500px);
     }
 }

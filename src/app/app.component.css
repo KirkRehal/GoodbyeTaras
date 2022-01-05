@@ -18,3 +18,11 @@
 .text {
     font-size: 22px;
 }
+
+.header {
+    height: 100%;
+}
+
+.body {
+    height: 100%;
+}

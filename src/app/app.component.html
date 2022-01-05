@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="header"></div>
+  <!-- <div class="header"></div> -->
   <div class="body">
     <app-lockscreen (passwordEmitter)="checkPassword($event)" *ngIf="showLockscreen"></app-lockscreen>
     <app-goodbye *ngIf="!showLockscreen"></app-goodbye>
