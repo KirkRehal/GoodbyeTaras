@@ -1,11 +1,18 @@
-<div class="quote-container">
+<div *ngIf="!fin" class="quote-container">
     <span class="quote-outer" [class.left-to-right]="quoteCounter % 2 === 0" [class.right-to-left]="quoteCounter % 2 !== 0">
         <blockquote><span class="quote-text">{{quotes[quoteCounter]}}</span></blockquote>
     </span>
 </div>
 
-<div class="image-container">
+<div *ngIf="!fin" class="image-container">
+    <div *ngIf="counter <= funnyQuotes.length" class="behind-image-container"><span class="funny-text">{{funnyQuotes[funnyQuoteCounter]}}</span></div>
     <div class="image-outer"><img class="image" src="assets/{{images[imageCounter]}}"/></div>
+</div>
+
+<div *ngIf="fin" class="fin-container">
+    <div class="fin-text-container">
+        <div class="fin-text">Goodbye, Taras!</div>
+    </div>
 </div>
 
 <!-- <iframe src="silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe> -->

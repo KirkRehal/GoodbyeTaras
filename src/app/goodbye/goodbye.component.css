@@ -32,14 +32,31 @@
 }
 
 .quote-text {
-    font-size: 80px;
+    font-size: 60px;
+    font-weight: 800;
     font-family: 'The Nautigal', cursive;
     text-shadow: -1px 1px 0 #fff, 1px 1px 0 #ffff, 1px -1px 0 #fff, -1px -1px 0 #fff;
 }
 
 .image-container {
+    background-image: url('./../../assets/bg.png');
     display: flex;
     justify-content: center;
+}
+
+.behind-image-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 30px;
+    font-weight: 500;
+    font-style: bold;
+}
+
+.funny-text {
+    font-size: 24px;
+    animation: funnyFadeInOut var(--zoom-duration) linear;
+    animation-iteration-count: infinite;
 }
 
 .image {
@@ -49,21 +66,21 @@
 }
 
 .image-outer {
-    animation: panUp var(--zoom-duration) linear;
+    animation: fadeInOut var(--zoom-duration) linear;
     animation-iteration-count: infinite;
 }
 
 blockquote {
     background: transparent;
-    margin: 1.5em 10px;
-    padding: 0.5em 10px;
+    margin: 1.0em 10px;
+    padding: 0.25em 10px;
     quotes: "\201C""\201D""\2018""\2019";
     max-width: 50%;
   }
   blockquote:before {
     color: #ccc;
     content: open-quote;
-    font-size: 4em;
+    font-size: 2em;
     line-height: 0.1em;
     margin-right: 0.25em;
     vertical-align: -0.4em;
@@ -72,12 +89,48 @@ blockquote {
     display: inline;
   }
 
+.fin-container {
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    animation: fadeIn 2s linear;
+    animation-iteration-count: 1;
+}
+
+.fin-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: slowZoomSuper 30s linear;
+    animation-iteration-count: 1;
+}
+
+.fin-text {
+    font-size: 80px;
+    font-family: 'The Nautigal', cursive;
+    text-shadow: -1px 1px 0 #fff, 1px 1px 0 #ffff, 1px -1px 0 #fff, -1px -1px 0 #fff;
+}
+
 /* animations */
 @keyframes fadeInOut {
     0% { opacity: 0; }
     20% { opacity: 1; }
     80% { opacity: 1; }
     100% { opacity: 0; }
+}
+
+@keyframes funnyFadeInOut {
+    0% { opacity: 0; }
+    40% { opacity: 0; }
+    50% { opacity: 1; }
+    95% { opacity:  1; }
+    100% { opacity: 0; }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 @keyframes leftToRight {
@@ -92,7 +145,17 @@ blockquote {
 
 @keyframes slowZoom {
     0% { 
-        transform: scale(0.5);
+        transform: scale(0.75);
+    }
+
+    100% { 
+        transform: scale(1.25); 
+    }
+}
+
+@keyframes slowZoomSuper {
+    0% { 
+        transform: scale(1.0);
     }
 
     100% { 
