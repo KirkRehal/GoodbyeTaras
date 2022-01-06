@@ -5,7 +5,7 @@
 </div>
 
 <div *ngIf="!fin" class="image-container">
-    <div *ngIf="counter <= funnyQuotes.length" class="behind-image-container"><span class="funny-text">{{funnyQuotes[funnyQuoteCounter]}}</span></div>
+    <div *ngIf="counter < funnyQuotes.length" class="behind-image-container"><span class="funny-text">{{funnyQuotes[funnyQuoteCounter]}}</span></div>
     <div class="image-outer"><img class="image" src="assets/{{images[imageCounter]}}"/></div>
 </div>
 
