@@ -1,6 +1,6 @@
 <div *ngIf="!fin" class="quote-container">
     <span class="quote-outer" [class.left-to-right]="quoteCounter % 2 === 0" [class.right-to-left]="quoteCounter % 2 !== 0">
-        <blockquote><span class="quote-text">{{quotes[quoteCounter]}}</span></blockquote>
+        <blockquote><span class="quote-text" [class.easy-quote-text]="quoteCounter === 10" [innerText]="quotes[quoteCounter]"></span></blockquote>
     </span>
 </div>
 

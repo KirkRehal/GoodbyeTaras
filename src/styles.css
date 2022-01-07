@@ -2,6 +2,6 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 :root {
-    --view-duration: 8s;
-    --zoom-duration: 8s;
+    --view-duration: 10s;
+    --zoom-duration: 10s;
 }

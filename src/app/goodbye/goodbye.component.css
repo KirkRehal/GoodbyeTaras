@@ -1,3 +1,4 @@
+/* @import url('https://fonts.googleapis.com/css2?family=The+Nautigal&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=The+Nautigal&display=swap');
 
 .quote-container {
@@ -32,10 +33,15 @@
 }
 
 .quote-text {
-    font-size: 60px;
+    font-size: 80px;
     font-weight: 800;
     font-family: 'The Nautigal', cursive;
-    text-shadow: -1px 1px 0 #fff, 1px 1px 0 #ffff, 1px -1px 0 #fff, -1px -1px 0 #fff;
+    text-shadow: -0.5px 0.5px 0 #fff, 1px 0.5px 0 #ffff, 0.5px -0.5px 0 #fff, -0.5px -0.5px 0 #fff;
+    color: black;
+}
+
+.easy-quote-text {
+
 }
 
 .image-container {
@@ -78,7 +84,8 @@ blockquote {
     max-width: 50%;
   }
   blockquote:before {
-    color: #ccc;
+    text-shadow: -0.5px 0.5px 0 #fff, 1px 0.5px 0 #ffff, 0.5px -0.5px 0 #fff, -0.5px -0.5px 0 #fff;
+    color: black;
     content: open-quote;
     font-size: 2em;
     line-height: 0.1em;
