@@ -33,11 +33,12 @@
 }
 
 .quote-text {
-    font-size: 80px;
+    font-size: 60px;
     font-weight: 800;
-    font-family: 'The Nautigal', cursive;
-    text-shadow: -0.5px 0.5px 0 #fff, 1px 0.5px 0 #ffff, 0.5px -0.5px 0 #fff, -0.5px -0.5px 0 #fff;
-    color: black;
+    /* font-family: 'The Nautigal', cursive; */
+    font-family: Open Sans,sans-serif;
+    text-shadow: -1px 1px 0 #FFFFFF, 1px 1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, -1px -1px 0 #FFFFFF;
+    color: #363636;
 }
 
 .easy-quote-text {
@@ -84,8 +85,8 @@ blockquote {
     max-width: 50%;
   }
   blockquote:before {
-    text-shadow: -0.5px 0.5px 0 #fff, 1px 0.5px 0 #ffff, 0.5px -0.5px 0 #fff, -0.5px -0.5px 0 #fff;
-    color: black;
+    text-shadow: -1px 1px 0 #FFFFFF, 1px 1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, -1px -1px 0 #FFFFFF;
+    color: #363636;
     content: open-quote;
     font-size: 2em;
     line-height: 0.1em;

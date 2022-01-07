@@ -13,8 +13,9 @@ export class GoodbyeComponent implements OnInit {
   public quotes: string[] = [
     `Holy moly, I didn't know there was watermelon!`, 
     `I see your vision, mama.`, 
-    `Listen Sarah, I know everyone has
-    their own priorities...but yours are totally f***ed up`,
+    `Listen Sarah, I know 
+    everyone has their own priorities...
+    but yours are totally f***ed up`,
     `It's matcha powder...or as I like to call it, green cocaine`,
     `
     Person: Where's Tehreem? Didn't she say shes's coming?
